@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace PierresTracker
+namespace PierresTracker.Models
 {
   public class Order
   {
@@ -17,11 +17,17 @@ namespace PierresTracker
       Description = description;
       Price = price;
       Date = date;
+      _instances.Add(this);
     }
 
     public static List<Order> GetAll()
     {
       return _instances;
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }

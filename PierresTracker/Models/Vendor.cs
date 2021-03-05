@@ -1,4 +1,4 @@
-namespace PierresTracker
+namespace PierresTracker.Models
 {
   public class Vendor
   {
