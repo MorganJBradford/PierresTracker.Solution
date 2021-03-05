@@ -24,7 +24,12 @@ ___
 * Execute **code .** command in your terminal and it will open all source code in your code editor.    
 ⚠️ *Note: To run this project locally you will need to have .NET Core. You can check if you have .NET Core by running dotnet --version in the command line. If you do not have .NET Core please find more information and download [here](https://dotnet.microsoft.com/download/dotnet)*
 
-#### Running the Program
+#### 🏁 Running Tests:
+* To run MS tests you will need to navigate to the `PierresTracker.Tests` folder *(cd PierresTracker.Tests)* in the command line and then run `dotnet restore`.
+* You should now see **'obj'** folders in both the `PierresTracker.Tests` folder and `PierresTracker` folder.
+* At this point you should be able to successfully run `dotnet test` in the command line (keep in mind you should still be in the PierresTracker.Tests folder).
+
+####  🖥️ View website:
 * From the top level directory enter 'cd PierresTracker' in the command line.
 * Run the command 'dotnet restore' to download dependencies required to run the project.
 * Next, enter 'dotnet run' the in command line. You should a message similar to the following populate in your terminal:
@@ -36,15 +41,6 @@ ___
 > Application started. Press Ctrl+C to shut down.
 
 * Lastly, follow the link "http://localhost:5000" either via holding the 'ctrl' and clicking the link (PC), or by holding 'cmd' and clicking the link (Mac).
-
-
-#### 🏁 Running Tests:
-* To run MS tests you will need to navigate to the `PierresTracker.Tests` folder *(cd PierresTracker.Tests)* in the command line and then run `dotnet restore`.
-* You should now see **'obj'** folders in both the `PierresTracker.Tests` folder and `PierresTracker` folder.
-* At this point you should be able to successfully run `dotnet test` in the command line (keep in mind you should still be in the PierresTracker.Tests folder).
-
-####  🖥️ View website:
-*GitHub page is not available for this project. To view functionality you need to run `dotnet run` and pass your word after that command before press enter.*
 
 ## 🛠️ *Technologies used:*
 * C# 9
