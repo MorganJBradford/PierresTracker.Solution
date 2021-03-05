@@ -16,7 +16,7 @@ ___
 ## 🔧 *Setup/Installation instructions:*
 #### 🌐 From the web:
 * Go to my GitHub repository, using following [URL](https://github.com/MorganJBradford/PierresTracker.Solution.git).
-* Click the "Code" <img src="https://i.imgur.com/Ej9Dphm.png" alt="code button" height="20" align="center"/> and click the 'Download zip' option ![img](img/zip.png).
+* Click the "Code" <img src="README-files/download-button.png" alt="code button" height="20" align="center"/> and click the 'Download zip' option ![img](README-files/Capture.JPG).
 * Unzip the file, navigate to the `Models` directory to check code or to the `ModelTests` directory to see tests.
 #### ⚙️ From the terminal: 
 * Clone my repository from GitHub using `git clone https://github.com/MorganJBradford/PierresTracker.Solution.git` in your terminal or GitBash
