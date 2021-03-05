@@ -25,7 +25,22 @@ namespace PierresTracker.Tests
 
       //Assert
       Assert.AreEqual(title, result);
+    }
 
+    [TestMethod]
+    public void SetTitle_SetTitle_String()
+    {
+      //Arrange
+      string title = "Cannoli";
+      Order newOrder = new Order(title);
+
+      //Act
+      string updatedTitle = "Donuts";
+      newOrder.Title = updatedTitle;
+      string result = newOrder.Title;
+
+      //Assert
+      Assert.AreEqual(updatedTitle, result);
     }
   }
 }
