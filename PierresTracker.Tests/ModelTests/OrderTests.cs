@@ -9,8 +9,23 @@ namespace PierresTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreateInstanceOfOrder_Order()
     {
-      Order newOrder = new Order();
+      Order newOrder = new Order("Cannoli");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+
+    [TestMethod]
+    public void GetTitle_ReturnsTitle_String()
+    {
+      //Arrange
+      string title = "Cannoli";
+
+      //Act
+      Order newOrder = new Order(title);
+      string result = newOrder.Title;
+
+      //Assert
+      Assert.AreEqual(title, result);
+
     }
   }
 }
