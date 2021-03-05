@@ -24,6 +24,20 @@ ___
 * Execute **code .** command in your terminal and it will open all source code in your code editor.    
 ⚠️ *Note: To run this project locally you will need to have .NET Core. You can check if you have .NET Core by running dotnet --version in the command line. If you do not have .NET Core please find more information and download [here](https://dotnet.microsoft.com/download/dotnet)*
 
+#### Running the Program
+* From the top level directory enter 'cd PierresTracker' in the command line.
+* Run the command 'dotnet restore' to download dependencies required to run the project.
+* Next, enter 'dotnet run' the in command line. You should a message similar to the following populate in your terminal:
+
+> Hosting environment: Production
+> Content root path: C:\Users\vampi\OneDrive\Desktop\epicodus\PierresTracker.Solution\PierresTracker
+> Now listening on: http://localhost:5000
+> Now listening on: https://localhost:5001
+> Application started. Press Ctrl+C to shut down.
+
+* Lastly, follow the link "http://localhost:5000" either via holding the 'ctrl' and clicking the link (PC), or by holding 'cmd' and clicking the link (Mac).
+
+
 #### 🏁 Running Tests:
 * To run MS tests you will need to navigate to the `PierresTracker.Tests` folder *(cd PierresTracker.Tests)* in the command line and then run `dotnet restore`.
 * You should now see **'obj'** folders in both the `PierresTracker.Tests` folder and `PierresTracker` folder.
@@ -40,7 +54,7 @@ ___
 * Git and GitHub
 
 ## 🐛 *Known bugs:*
-* No know bugs at this time
+* No known bugs at this time
 * You you find any bugs, _please_ contact me via my email below.
 
 ## 📬 Contact Information
