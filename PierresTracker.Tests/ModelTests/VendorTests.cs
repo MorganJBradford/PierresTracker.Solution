@@ -129,5 +129,27 @@ namespace PierresTracker.Tests
       //Assert
       Assert.AreEqual(newVendor2, result);
     }
+
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      //Arrange
+      string title = "Cannolis.";
+      string description01 = "45 Cannolis.";
+      int price = 60;
+      string date = "4/1/2021";
+      Order newOrder = new Order(title, description01, price, date);
+      List<Order> newList = new List<Order> { newOrder };
+      string name = "Esther's Essentials";
+      string description02 = "Description";
+      Vendor newVendor = new Vendor(name, description02);
+      newVendor.AddOrder(newOrder);
+
+      //Act
+      List<Order> result = newVendor.Orders;
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
