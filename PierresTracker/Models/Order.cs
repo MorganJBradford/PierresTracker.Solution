@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace PierresTracker.Models
 {
@@ -8,16 +9,16 @@ namespace PierresTracker.Models
     public string Description { get; set; }
     public int Price { get; set; }
 
-    public string Date { get; set; }
+    public DateTime Now { get; }
     public int Id { get; }
     private static List<Order> _instances = new List<Order> {};
 
-    public Order (string title, string description, int price, string date)
+    public Order (string title, string description, int price, DateTime now)
     {
       Title = title;
       Description = description;
       Price = price;
-      Date = date;
+      Now = now;
       _instances.Add(this);
       Id = _instances.Count;
     }

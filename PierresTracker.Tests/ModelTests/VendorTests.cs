@@ -137,8 +137,8 @@ namespace PierresTracker.Tests
       string title = "Cannolis.";
       string description01 = "45 Cannolis.";
       int price = 60;
-      string date = "4/1/2021";
-      Order newOrder = new Order(title, description01, price, date);
+      DateTime localDate = DateTime.Now;
+      Order newOrder = new Order(title, description01, price, localDate);
       List<Order> newList = new List<Order> { newOrder };
       string name = "Esther's Essentials";
       string description02 = "Description";

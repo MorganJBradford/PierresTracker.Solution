@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using PierresTracker.Models;
+using System;
 
 namespace PierresTracker.Controllers
 {
@@ -38,11 +39,12 @@ namespace PierresTracker.Controllers
     }
 
     [HttpPost("/vendors/{vendorId}/orders/")]
-    public ActionResult Create(int vendorId, string orderTitle, string orderDescription, int orderPrice, string orderDate)
+    public ActionResult Create(int vendorId, string orderTitle, string orderDescription, int orderPrice)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
+      DateTime localDate = DateTime.Now;
       Vendor foundVendor = Vendor.Find(vendorId);
-      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, localDate);
       foundVendor.AddOrder(newOrder);
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);

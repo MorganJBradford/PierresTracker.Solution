@@ -16,7 +16,8 @@ namespace PierresTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreateInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("Cannoli", "45 Cannolis", 60, "4/1/2021");
+      DateTime localDate = DateTime.Now;
+      Order newOrder = new Order("Cannoli", "45 Cannolis", 60, localDate);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -25,9 +26,10 @@ namespace PierresTracker.Tests
     {
       //Arrange
       string title = "Cannoli";
+      DateTime localDate = DateTime.Now;
 
       //Act
-      Order newOrder = new Order(title, "45 Cannolis", 60, "4/1/2021");
+      Order newOrder = new Order(title, "45 Cannolis", 60, localDate);
       string result = newOrder.Title;
 
       //Assert
@@ -39,7 +41,8 @@ namespace PierresTracker.Tests
     {
       //Arrange
       string title = "Cannoli";
-      Order newOrder = new Order(title, "45 cannolis", 60, "4/1/2021");
+      DateTime localDate = DateTime.Now;
+      Order newOrder = new Order(title, "45 cannolis", 60, localDate);
 
       //Act
       string updatedTitle = "Donuts";
@@ -55,9 +58,10 @@ namespace PierresTracker.Tests
     {
       //Arrange
       string description = "45 donuts";
+      DateTime localDate = DateTime.Now;
 
       //Act
-      Order newOrder = new Order("Donuts", description, 60, "4/1/2021");
+      Order newOrder = new Order("Donuts", description, 60, localDate);
       string result = newOrder.Description;
 
       //Assert
@@ -69,7 +73,8 @@ namespace PierresTracker.Tests
     {
       //Arrange
       string description = "Cannoli";
-      Order newOrder = new Order(description, "45 cannolis", 60, "4/1/2021");
+      DateTime localDate = DateTime.Now;
+      Order newOrder = new Order(description, "45 cannolis", 60, localDate);
 
       //Act
       string updatedDescription = "Donuts";
@@ -85,9 +90,10 @@ namespace PierresTracker.Tests
     {
       //Arrange
       int price = 60;
+      DateTime localDate = DateTime.Now;
 
       //Act
-      Order newOrder = new Order("Donuts", "45 donuts", price, "4/1/2021");
+      Order newOrder = new Order("Donuts", "45 donuts", price, localDate);
       int result = newOrder.Price;
 
       //Assert
@@ -99,7 +105,8 @@ namespace PierresTracker.Tests
     {
       //Arrange
       int price = 60;
-      Order newOrder = new Order("donuts", "45 glazed donuts", price, "4/1/2021");
+      DateTime localDate = DateTime.Now;
+      Order newOrder = new Order("donuts", "45 glazed donuts", price, localDate);
 
       //Act
       int updatedPrice = 50;
@@ -114,30 +121,14 @@ namespace PierresTracker.Tests
     public void GetDate_ReturnsDate_String()
     {
       //Arrange
-      string date = "4/1/2021";
+      DateTime localDate = DateTime.Now;
 
       //Act
-      Order newOrder = new Order("Donuts", "45 donuts", 60, date);
-      string result = newOrder.Date;
+      Order newOrder = new Order("Donuts", "45 donuts", 60, localDate);
+      DateTime result = newOrder.Now;
 
       //Assert
-      Assert.AreEqual(date, result);
-    }
-
-    [TestMethod]
-    public void SetDate_SetDate_String()
-    {
-      //Arrange
-      string date = "4/1/2021";
-      Order newOrder = new Order("donuts", "45 glazed donuts", 60, date);
-
-      //Act
-      string updatedDate = "3/20/2021";
-      newOrder.Date = updatedDate;
-      string result = newOrder.Date;
-
-      //Assert
-      Assert.AreEqual(updatedDate, result);
+      Assert.AreEqual(localDate, result);
     }
 
     [TestMethod]
@@ -160,13 +151,13 @@ namespace PierresTracker.Tests
       string title01 = "Cannoli";
       string description01 = "45 cannolis";
       int price01 = 80;
-      string date01 = "9/23/2021";
+      DateTime localDate01 = DateTime.Now;
       string title02 = "Donuts";
       string description02 = "45 glazed donuts";
       int price02 = 70;
-      string date02 = "4/1/2021";
-      Order newOrder1 = new Order(title01, description01, price01, date01);
-      Order newOrder2 = new Order(title02 ,description02, price02, date02);
+      DateTime localDate02 = DateTime.Now;
+      Order newOrder1 = new Order(title01, description01, price01, localDate01);
+      Order newOrder2 = new Order(title02 ,description02, price02, localDate02);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 
       //Act
@@ -183,8 +174,8 @@ namespace PierresTracker.Tests
       string title = "Cannoli";
       string description = "45 cannolis";
       int price = 80;
-      string date = "9/23/2021";
-      Order newOrder = new Order(title, description, price, date);
+      DateTime localDate = DateTime.Now;
+      Order newOrder = new Order(title, description, price, localDate);
 
       //Act
       int result = newOrder.Id;
@@ -200,13 +191,13 @@ namespace PierresTracker.Tests
       string title01 = "Cannoli";
       string description01 = "45 cannolis";
       int price01 = 80;
-      string date01 = "9/23/2021";
+      DateTime localDate01 = DateTime.Now;
       string title02 = "Donuts";
       string description02 = "45 glazed donuts";
       int price02 = 70;
-      string date02 = "4/1/2021";
-      Order newOrder1 = new Order(title01, description01, price01, date01);
-      Order newOrder2 = new Order(title02 ,description02, price02, date02);
+      DateTime localDate02 = DateTime.Now;
+      Order newOrder1 = new Order(title01, description01, price01, localDate01);
+      Order newOrder2 = new Order(title02 ,description02, price02, localDate02);
 
       //Act
       Order result = Order.Find(2);
