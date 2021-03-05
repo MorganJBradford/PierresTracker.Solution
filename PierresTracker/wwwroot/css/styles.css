@@ -4,10 +4,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: relative;
-  color: black;
+  color: white;
 }
 
 a {
- color: black;
+ color: white;
  text-decoration: underline;
+}
+
+h1, h3 {
+  text-align: center;
 }
