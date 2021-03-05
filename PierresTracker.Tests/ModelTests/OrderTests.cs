@@ -9,7 +9,7 @@ namespace PierresTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreateInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("Cannoli", "45 Cannolis", 60);
+      Order newOrder = new Order("Cannoli", "45 Cannolis", 60, "4/1/2021");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -20,7 +20,7 @@ namespace PierresTracker.Tests
       string title = "Cannoli";
 
       //Act
-      Order newOrder = new Order(title, "45 Cannolis", 60);
+      Order newOrder = new Order(title, "45 Cannolis", 60, "4/1/2021");
       string result = newOrder.Title;
 
       //Assert
@@ -32,7 +32,7 @@ namespace PierresTracker.Tests
     {
       //Arrange
       string title = "Cannoli";
-      Order newOrder = new Order(title, "45 cannolis", 60);
+      Order newOrder = new Order(title, "45 cannolis", 60, "4/1/2021");
 
       //Act
       string updatedTitle = "Donuts";
@@ -50,7 +50,7 @@ namespace PierresTracker.Tests
       string description = "45 donuts";
 
       //Act
-      Order newOrder = new Order("Donuts", description, 60);
+      Order newOrder = new Order("Donuts", description, 60, "4/1/2021");
       string result = newOrder.Description;
 
       //Assert
@@ -62,7 +62,7 @@ namespace PierresTracker.Tests
     {
       //Arrange
       string description = "Cannoli";
-      Order newOrder = new Order(description, "45 cannolis", 60);
+      Order newOrder = new Order(description, "45 cannolis", 60, "4/1/2021");
 
       //Act
       string updatedDescription = "Donuts";
@@ -80,7 +80,7 @@ namespace PierresTracker.Tests
       int price = 60;
 
       //Act
-      Order newOrder = new Order("Donuts", "45 donuts", price);
+      Order newOrder = new Order("Donuts", "45 donuts", price, "4/1/2021");
       int result = newOrder.Price;
 
       //Assert
@@ -92,7 +92,7 @@ namespace PierresTracker.Tests
     {
       //Arrange
       int price = 60;
-      Order newOrder = new Order("donuts", "45 glazed donuts", price);
+      Order newOrder = new Order("donuts", "45 glazed donuts", price, "4/1/2021");
 
       //Act
       int updatedPrice = 50;
@@ -101,6 +101,20 @@ namespace PierresTracker.Tests
 
       //Assert
       Assert.AreEqual(updatedPrice, result);
+    }
+
+    [TestMethod]
+    public void GetDate_ReturnsDate_String()
+    {
+      //Arrange
+      string date = "4/1/2021";
+
+      //Act
+      Order newOrder = new Order("Donuts", "45 donuts", 60, date);
+      string result = newOrder.Date;
+
+      //Assert
+      Assert.AreEqual(date, result);
     }
   }
 }
