@@ -26,5 +26,21 @@ namespace PierresTracker.Tests
       //Assert
       Assert.AreEqual(name, result);
     }
+
+    [TestMethod]
+    public void SetName_SetName_String()
+    {
+      //Arrange
+      string name = "Pedro's Poultry";
+      Vendor newVendor = new Vendor(name);
+
+      //Act
+      string updatedName = "Esther's Essentials";
+      newVendor.Name = updatedName;
+      string result = newVendor.Name;
+
+      //Assert
+      Assert.AreEqual(updatedName, result);
+    }
   }
 }
