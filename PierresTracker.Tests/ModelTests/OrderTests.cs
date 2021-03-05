@@ -9,7 +9,7 @@ namespace PierresTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreateInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("Cannoli");
+      Order newOrder = new Order("Cannoli", "45 Cannolis");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -20,7 +20,7 @@ namespace PierresTracker.Tests
       string title = "Cannoli";
 
       //Act
-      Order newOrder = new Order(title);
+      Order newOrder = new Order(title, "45 Cannolis");
       string result = newOrder.Title;
 
       //Assert
@@ -32,7 +32,7 @@ namespace PierresTracker.Tests
     {
       //Arrange
       string title = "Cannoli";
-      Order newOrder = new Order(title);
+      Order newOrder = new Order(title, "45 cannolis");
 
       //Act
       string updatedTitle = "Donuts";
@@ -42,5 +42,20 @@ namespace PierresTracker.Tests
       //Assert
       Assert.AreEqual(updatedTitle, result);
     }
+
+        [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      //Arrange
+      string description = "45 donuts";
+
+      //Act
+      Order newOrder = new Order("Donuts", description);
+      string result = newOrder.Description;
+
+      //Assert
+      Assert.AreEqual(description, result);
+    }
+
   }
 }
