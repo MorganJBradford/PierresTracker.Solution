@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace PierresTracker
 {
   public class Order
@@ -7,6 +9,7 @@ namespace PierresTracker
     public int Price { get; set; }
 
     public string Date { get; set; }
+    private static List<Order> _instances = new List<Order> {};
 
     public Order (string title, string description, int price, string date)
     {
@@ -14,6 +17,11 @@ namespace PierresTracker
       Description = description;
       Price = price;
       Date = date;
+    }
+
+    public static List<Order> GetAll()
+    {
+      return _instances;
     }
   }
 }

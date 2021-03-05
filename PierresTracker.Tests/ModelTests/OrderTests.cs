@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using PierresTracker;
 
 namespace PierresTracker.Tests
@@ -131,6 +132,19 @@ namespace PierresTracker.Tests
 
       //Assert
       Assert.AreEqual(updatedDate, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      // Arrange
+      List<Order> newList = new List<Order> { };
+
+      // Act
+      List<Order> result = Order.GetAll();
+
+      // Assert
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
