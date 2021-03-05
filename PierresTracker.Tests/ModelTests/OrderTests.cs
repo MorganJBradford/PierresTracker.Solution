@@ -57,5 +57,21 @@ namespace PierresTracker.Tests
       Assert.AreEqual(description, result);
     }
 
+        [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      //Arrange
+      string description = "Cannoli";
+      Order newOrder = new Order(description, "45 cannolis");
+
+      //Act
+      string updatedDescription = "Donuts";
+      newOrder.Description = updatedDescription;
+      string result = newOrder.Description;
+
+      //Assert
+      Assert.AreEqual(updatedDescription, result);
+    }
+
   }
 }
