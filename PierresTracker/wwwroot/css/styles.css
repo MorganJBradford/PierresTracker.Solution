@@ -1,0 +1,13 @@
+body {
+  background: url(../img/bakery-background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: relative;
+  color: black;
+}
+
+a {
+ color: black;
+ text-decoration: underline;
+}

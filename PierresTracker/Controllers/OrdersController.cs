@@ -24,6 +24,5 @@ namespace PierresTracker.Controllers
       model.Add("vendor", vendor);
       return View(model);
     }
-
   }
 }

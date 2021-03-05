@@ -10,7 +10,7 @@
 
 ___
 ## 🚩 *Description*:    
-### *Use this website to create and store a list a vendors your business has relationships with, as well as orders that your vendors have ordered. This website will allow you to view vendors(name, description) and order details (title, description, cost, date/time of order) of those entered*
+### *Use this website to create and store a list a vendors your business has relationships with, as well as orders that your vendors have ordered. This website will allow you to view vendors(name, description) and order details (title, description, cost, date/time of order) of those entered.*
 
 
 ## 🔧 *Setup/Installation instructions:*
