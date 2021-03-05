@@ -175,5 +175,23 @@ namespace PierresTracker.Tests
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }
+
+        [TestMethod]
+    public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      //Arrange
+      string title = "Cannoli";
+      string description = "45 cannolis";
+      int price = 80;
+      string date = "9/23/2021";
+      Order newOrder = new Order(title, description, price, date);
+
+      //Act
+      int result = newOrder.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
+
   }
 }
