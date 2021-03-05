@@ -45,6 +45,7 @@ ___
 ## 🛠️ *Technologies used:*
 * C# 9
 * .NET Core v5.0
+* ASP.NET Core MVC
 * MSTest
 * REPL
 * Git and GitHub
