@@ -13,6 +13,7 @@ namespace PierresTracker
       Title = title;
       Description = description;
       Price = price;
+      Date = date;
     }
   }
 }
