@@ -116,5 +116,21 @@ namespace PierresTracker.Tests
       //Assert
       Assert.AreEqual(date, result);
     }
+
+    [TestMethod]
+    public void SetDate_SetDate_String()
+    {
+      //Arrange
+      string date = "4/1/2021";
+      Order newOrder = new Order("donuts", "45 glazed donuts", 60, date);
+
+      //Act
+      string updatedDate = "3/20/2021";
+      newOrder.Date = updatedDate;
+      string result = newOrder.Date;
+
+      //Assert
+      Assert.AreEqual(updatedDate, result);
+    }
   }
 }
