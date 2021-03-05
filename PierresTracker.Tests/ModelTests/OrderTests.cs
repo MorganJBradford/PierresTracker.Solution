@@ -43,7 +43,7 @@ namespace PierresTracker.Tests
       Assert.AreEqual(updatedTitle, result);
     }
 
-        [TestMethod]
+    [TestMethod]
     public void GetDescription_ReturnsDescription_String()
     {
       //Arrange
@@ -57,7 +57,7 @@ namespace PierresTracker.Tests
       Assert.AreEqual(description, result);
     }
 
-        [TestMethod]
+    [TestMethod]
     public void SetDescription_SetDescription_String()
     {
       //Arrange
@@ -87,5 +87,20 @@ namespace PierresTracker.Tests
       Assert.AreEqual(price, result);
     }
 
+    [TestMethod]
+    public void SetPrice_SetPrice_Int()
+    {
+      //Arrange
+      int price = 60;
+      Order newOrder = new Order("donuts", "45 glazed donuts", price);
+
+      //Act
+      int updatedPrice = 50;
+      newOrder.Price = updatedPrice;
+      int result = newOrder.Price;
+
+      //Assert
+      Assert.AreEqual(updatedPrice, result);
+    }
   }
 }
