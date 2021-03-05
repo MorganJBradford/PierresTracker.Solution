@@ -8,6 +8,7 @@ namespace PierresTracker
     public Order (string title, string description)
     {
       Title = title;
+      Description = description;
     }
   }
 }
