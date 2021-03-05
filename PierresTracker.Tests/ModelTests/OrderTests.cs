@@ -140,18 +140,18 @@ namespace PierresTracker.Tests
       Assert.AreEqual(updatedDate, result);
     }
 
-    // [TestMethod]
-    // public void GetAll_ReturnsEmptyList_OrderList()
-    // {
-    //   // Arrange
-    //   List<Order> newList = new List<Order> { };
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      // Arrange
+      List<Order> newList = new List<Order> { };
 
-    //   // Act
-    //   List<Order> result = Order.GetAll();
+      // Act
+      List<Order> result = Order.GetAll();
 
-    //   // Assert
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+      // Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
 
     [TestMethod]
     public void GetAll_ReturnsOrders_OrderList()
@@ -177,7 +177,7 @@ namespace PierresTracker.Tests
     }
 
         [TestMethod]
-    public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
     {
       //Arrange
       string title = "Cannoli";
@@ -191,6 +191,28 @@ namespace PierresTracker.Tests
 
       //Assert
       Assert.AreEqual(1, result);
+    }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      //Arrange
+      string title01 = "Cannoli";
+      string description01 = "45 cannolis";
+      int price01 = 80;
+      string date01 = "9/23/2021";
+      string title02 = "Donuts";
+      string description02 = "45 glazed donuts";
+      int price02 = 70;
+      string date02 = "4/1/2021";
+      Order newOrder1 = new Order(title01, description01, price01, date01);
+      Order newOrder2 = new Order(title02 ,description02, price02, date02);
+
+      //Act
+      Order result = Order.Find(2);
+
+      //Assert
+      Assert.AreEqual(newOrder2, result);
     }
 
   }
