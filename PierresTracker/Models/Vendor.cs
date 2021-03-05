@@ -6,7 +6,7 @@ namespace PierresTracker.Models
 
     public Vendor(string vendorName)
     {
-      
+      Name = vendorName;
     }
   }
 }
