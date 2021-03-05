@@ -56,5 +56,22 @@ namespace PierresTracker.Tests
       //Assert
       Assert.AreEqual(description, result);
     }
+
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      //Arrange
+      string description = "description";
+      Vendor newVendor = new Vendor("Esther's Essentials", description);
+
+      //Act
+      string updatedDescription = "updated description";
+      newVendor.Description = updatedDescription;
+      string result = newVendor.Description;
+
+      //Assert
+      Assert.AreEqual(updatedDescription, result);
+    }
+
   }
 }
