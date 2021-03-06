@@ -43,5 +43,10 @@ namespace PierresTracker.Models
       Orders.Remove(order);
     }
 
+    public void RemoveVendor(Vendor vendor)
+    {
+      _instances.Remove(vendor);
+    }
+
   }
 }

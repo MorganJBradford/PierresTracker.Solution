@@ -53,7 +53,7 @@ namespace PierresTracker.Controllers
     }
 
     [HttpPost("/vendors/{vendorId}/orders/{orderId}")]
-    public ActionResult Delete(int vendorId, int orderId)
+    public ActionResult DeleteOrder(int vendorId, int orderId)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Order foundOrder = Order.Find(orderId);
@@ -63,8 +63,19 @@ namespace PierresTracker.Controllers
       model.Add("orders", vendorOrders);
       model.Add("vendor", foundVendor);
       return View();
-
-
     }
+    
+    [HttpPost("/vendors/{vendorId}")]
+    public ActionResult DeleteVendor(int vendorId)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor foundVendor = Vendor.Find(vendorId);
+      foundVendor.RemoveVendor(foundVendor);
+      List<Order> vendorOrders = foundVendor.Orders;
+      model.Add("orders", vendorOrders);
+      model.Add("vendor", foundVendor);
+      return View();
+    }
+
   }
 }
