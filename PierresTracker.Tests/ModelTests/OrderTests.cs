@@ -86,32 +86,32 @@ namespace PierresTracker.Tests
     }
 
     [TestMethod]
-    public void GetPrice_ReturnsPrice_Int()
+    public void GetPrice_ReturnsPrice_Float()
     {
       //Arrange
-      int price = 60;
+      float price = 60;
       DateTime localDate = DateTime.Now;
 
       //Act
       Order newOrder = new Order("Donuts", "45 donuts", price, localDate);
-      int result = newOrder.Price;
+      float result = newOrder.Price;
 
       //Assert
       Assert.AreEqual(price, result);
     }
 
     [TestMethod]
-    public void SetPrice_SetPrice_Int()
+    public void SetPrice_SetPrice_Float()
     {
       //Arrange
-      int price = 60;
+      float price = 60;
       DateTime localDate = DateTime.Now;
       Order newOrder = new Order("donuts", "45 glazed donuts", price, localDate);
 
       //Act
-      int updatedPrice = 50;
+      float updatedPrice = 50;
       newOrder.Price = updatedPrice;
-      int result = newOrder.Price;
+      float result = newOrder.Price;
 
       //Assert
       Assert.AreEqual(updatedPrice, result);
@@ -150,11 +150,11 @@ namespace PierresTracker.Tests
       //Arrange
       string title01 = "Cannoli";
       string description01 = "45 cannolis";
-      int price01 = 80;
+      float price01 = 80;
       DateTime localDate01 = DateTime.Now;
       string title02 = "Donuts";
       string description02 = "45 glazed donuts";
-      int price02 = 70;
+      float price02 = 70;
       DateTime localDate02 = DateTime.Now;
       Order newOrder1 = new Order(title01, description01, price01, localDate01);
       Order newOrder2 = new Order(title02 ,description02, price02, localDate02);
@@ -173,7 +173,7 @@ namespace PierresTracker.Tests
       //Arrange
       string title = "Cannoli";
       string description = "45 cannolis";
-      int price = 80;
+      float price = 80;
       DateTime localDate = DateTime.Now;
       Order newOrder = new Order(title, description, price, localDate);
 
@@ -190,11 +190,11 @@ namespace PierresTracker.Tests
       //Arrange
       string title01 = "Cannoli";
       string description01 = "45 cannolis";
-      int price01 = 80;
+      float price01 = 80;
       DateTime localDate01 = DateTime.Now;
       string title02 = "Donuts";
       string description02 = "45 glazed donuts";
-      int price02 = 70;
+      float price02 = 70;
       DateTime localDate02 = DateTime.Now;
       Order newOrder1 = new Order(title01, description01, price01, localDate01);
       Order newOrder2 = new Order(title02 ,description02, price02, localDate02);

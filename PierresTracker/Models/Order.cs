@@ -7,13 +7,13 @@ namespace PierresTracker.Models
   {
     public string Title { get; set; }
     public string Description { get; set; }
-    public int Price { get; set; }
+    public float Price { get; set; }
 
     public DateTime Now { get; }
     public int Id { get; }
     private static List<Order> _instances = new List<Order> {};
 
-    public Order (string title, string description, int price, DateTime now)
+    public Order (string title, string description, float price, DateTime now)
     {
       Title = title;
       Description = description;

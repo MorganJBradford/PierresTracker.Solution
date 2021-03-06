@@ -39,7 +39,7 @@ namespace PierresTracker.Controllers
     }
 
     [HttpPost("/vendors/{vendorId}/orders/")]
-    public ActionResult Create(int vendorId, string orderTitle, string orderDescription, int orderPrice)
+    public ActionResult Create(int vendorId, string orderTitle, string orderDescription, float orderPrice)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       DateTime localDate = DateTime.Now;
