@@ -6,7 +6,7 @@
 
 <h2>Title: @Model["order"].Title</h2>
 <h2>Description: @Model["order"].Description</h2>
-<h2>$@Model["order"].Price</h2>
+<h2>$@String.Format("{0:.00}", @Model["order"].Price)</h2>
 <h2>Order Date: @Model["order"].Now</h2>
 <h3>Vendor: @Model["vendor"].Name</h3>
 

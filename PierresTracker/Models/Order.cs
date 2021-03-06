@@ -8,7 +8,6 @@ namespace PierresTracker.Models
     public string Title { get; set; }
     public string Description { get; set; }
     public float Price { get; set; }
-
     public DateTime Now { get; }
     public int Id { get; }
     private static List<Order> _instances = new List<Order> {};
