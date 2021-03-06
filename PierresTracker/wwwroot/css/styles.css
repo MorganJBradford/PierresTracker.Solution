@@ -4,14 +4,26 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: relative;
-  color: white;
+  color: black;
 }
 
 a {
- color: white;
- text-decoration: underline;
+  background-color: rgb(105, 78, 78);
+  border: 2px solid black;
+  color: black;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: lightblue;
 }
 
 h1, h3 {
   text-align: center;
+  font-size: large;
+}
+
+label {
+  background-color: rgb(165, 89, 89);
+  border: 2px solid black;
 }
