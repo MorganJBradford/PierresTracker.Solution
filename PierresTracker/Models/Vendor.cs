@@ -15,7 +15,7 @@ namespace PierresTracker.Models
       Name = vendorName;
       Description = description;
       _instances.Add(this);
-      Id = _instances.Count;
+      Id = Id + 1;
       Orders = new List<Order>{};
     }
 

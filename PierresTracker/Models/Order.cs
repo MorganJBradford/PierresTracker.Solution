@@ -20,7 +20,7 @@ namespace PierresTracker.Models
       Price = price;
       Now = now;
       _instances.Add(this);
-      Id = _instances.Count;
+      Id = Id + 1;
     }
 
     public static List<Order> GetAll()
