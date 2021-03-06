@@ -14,6 +14,10 @@
 @foreach (Vendor vendor in Model)
 {
   <h3><a href="/vendors/@vendor.Id">@vendor.Name</a></h3>
+  <form action="/vendors/@vendor.Id" method="post">
+    <input id="venderId" name="venderId" type="hidden" value="@vendor.Id">
+    <button type="submit">Remove this Vender</button>
+  </form>
 }
 
 <p><a href="/">Back home</a></p>
