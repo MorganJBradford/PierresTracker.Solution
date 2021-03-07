@@ -67,11 +67,11 @@ namespace PierresTracker.Controllers
       Dictionary<string, object> model = new Dictionary<string, object>();
       DateTime localDate = DateTime.Now;
       Vendor foundVendor = Vendor.Find(vendorId);
-      foundVendor.RemoveVendor(foundVendor);
+      foundVendor.RemoveVendor((foundVendor));
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);
       model.Add("vendor", foundVendor);
-      return View();
+      return View(model);
     }
 
   }
