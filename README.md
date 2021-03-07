@@ -51,7 +51,7 @@ ___
 * Git and GitHub
 
 ## 🐛 *Known bugs:*
-* No known bugs at this time
+* Vendor delete buttons: only works when you delete the last vendor on the list.
 * You you find any bugs, _please_ contact me via my email below.
 
 ## 📬 Contact Information
